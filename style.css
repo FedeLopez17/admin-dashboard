@@ -1,5 +1,8 @@
 *{
     box-sizing: border-box; 
+    outline-style: solid;
+    outline-width: thin;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html, body{
@@ -28,7 +31,6 @@ div.outer-container{
     display: none;
 }
 
-
 .hamburguer.button > .bar1, .hamburguer.button > .bar2, .hamburguer.button > .bar3 {
     width: 35px;
     height: 5px;
@@ -39,7 +41,7 @@ div.outer-container{
 
 .outer-container > .column.right{
     display: grid;
-    grid-template-rows: 1fr  6fr;
+    grid-template-rows: 1fr  5fr;
     grid-column: 2;
     background-color: aqua;
     z-index: 1;
@@ -49,21 +51,109 @@ div.outer-container{
     background-color: blueviolet;
     display: flex;
     align-items: center;
+    transition: 0.8s;
+}
+
+.navbar > .navbar.right{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    background-color: green;
+}
+
+.navbar.right > .top{
+    flex: 1;
+    background-color: springgreen;
+}
+
+.navbar.right > .bottom{
+    flex: 1.5;
+    background-color: cornflowerblue;
 }
 
 .column.right > .row.bottom.main{
     background-color: yellow;
     display: flex;
+    transition: 0.7s;
 }
 
-.row.bottom > .column.left{
+.row.bottom.main > .column.left{
+    display: flex;
+    flex-direction: column;
     background-color: white;
     flex: 3;
+    height: 90%;
+    margin-top: 3%;
 }
 
-.row.bottom > .column.right{
+.column.left > .projects-title{
+    display: flex;
+    flex: 1;
+    background-color: silver;
+    align-items: center;
+}
+
+.projects-title > p{
+    font-size: 22px;
+    margin: 0 0 0 5%;
+}
+
+.column.left > .projects.outer{
+    display: flex;
+    flex: 13;
+    background-color: crimson;
+}
+
+.projects.outer > .projects.inner{
+    display: grid;
+    flex: 1;
+    background-color: teal;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+.row.bottom.main > .column.right{
+    display: flex;
     background-color: black;
     flex: 1;
+    flex-direction: column;
+    height: 90%;
+    margin-top: 3%;
+}
+
+.row.top.announcements, .row.bottom.trending{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: sandybrown;
+}
+
+.announcements > .announcements-title, .trending > .trending-title{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.announcements-title > p, .trending-title > p{
+    margin: 0 0 0 5%;
+    font-size: 22px;
+}
+
+.announcements > .announcements.outer, .trending > .trending.outer{
+    display: flex;
+    flex: 6;
+}
+
+.announcements.inner, .trending.inner{
+    flex: 1;
+    background-color: slategrey;
+    border-radius: 10px;
+    margin: 5%;
+}
+
+.row.bottom.trending{
+    background-color: seagreen;
 }
 
 @media (max-width: 1000px){
@@ -82,14 +172,23 @@ div.outer-container{
         cursor: pointer;
         transition-duration: 0.2s;
     }
-    .column.right > .row.bottom{
+    .column.right > .row.bottom.main{
         flex-direction: column-reverse;
+    }
+    .row.bottom.trending{
+        flex-direction: column;
     }
     .outer-container > .column.left.show-sidebar{
         width: calc(100% - 47px);
     }
     .move-hamburguer{
         margin-left: calc(100% - 47px);
+    }
+    .blur{
+        filter: blur(5px);
+    }
+    .increase-index{
+        z-index: 1;
     }
 }
 
