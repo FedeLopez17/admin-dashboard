@@ -1,5 +1,4 @@
 *{
-    box-sizing: border-box; 
     outline-style: solid;
     outline-width: thin;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -40,9 +39,8 @@ div.outer-container{
 }
 
 .outer-container > .column.right{
-    display: grid;
-    grid-template-rows: 1fr  5fr;
-    grid-column: 2;
+    display: flex;
+    flex-direction: column;
     background-color: aqua;
     z-index: 1;
 }
@@ -68,11 +66,38 @@ div.outer-container{
 }
 
 .navbar.right > .bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     flex: 1.5;
     background-color: cornflowerblue;
 }
 
+.navbar.bottom > img{
+    height: 60px;
+    border-radius: 50%;
+    outline-style: solid;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.navbar.bottom span{
+    display: block;
+    font-size: 16px;
+}
+
+.navbar.bottom > p{
+    font-size: 24px;
+    margin-right: auto;
+    font-weight: 900;
+}
+
+.navbar.bottom > div.buttons{
+    margin-right: 20px;
+}
+
 .column.right > .row.bottom.main{
+    flex: 1;
     background-color: yellow;
     display: flex;
     transition: 0.7s;
@@ -83,20 +108,12 @@ div.outer-container{
     flex-direction: column;
     background-color: white;
     flex: 3;
-    height: 90%;
     margin-top: 3%;
-}
-
-.column.left > .projects-title{
-    display: flex;
-    flex: 1;
-    background-color: silver;
-    align-items: center;
 }
 
 .projects-title > p{
     font-size: 22px;
-    margin: 0 0 0 5%;
+    margin: 0 0 0 10px;
 }
 
 .column.left > .projects.outer{
@@ -107,10 +124,63 @@ div.outer-container{
 
 .projects.outer > .projects.inner{
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     flex: 1;
     background-color: teal;
-    margin: 5%;
+    margin: 10px;
+    gap: 10px;
     border-radius: 10px;
+}
+
+.projects > .project{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: skyblue;
+}
+
+.project > .top{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 3;
+    font-size: 16px;
+}
+
+.project > .top span{
+    display: block;
+    background-color: tomato;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.project > .top > p{
+    margin: 10px;
+    max-width: 70%;
+    cursor: pointer;
+}
+
+.project > .bottom{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3%;
+}
+
+.project > .bottom > img{
+    height: 30px;
+    filter: invert(1);
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.project > .bottom > img:hover{
+    transform: scale(1.1);
+}
+
+.project > .bottom > img:last-of-type{
+    margin-right: 3%;
 }
 
 .row.bottom.main > .column.right{
@@ -118,7 +188,6 @@ div.outer-container{
     background-color: black;
     flex: 1;
     flex-direction: column;
-    height: 90%;
     margin-top: 3%;
 }
 
@@ -129,15 +198,16 @@ div.outer-container{
     background-color: sandybrown;
 }
 
-.announcements > .announcements-title, .trending > .trending-title{
-    flex: 1;
+.announcements > .announcements-title, .trending > .trending-title, .column.left > .projects-title{
+    flex: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
-.announcements-title > p, .trending-title > p{
-    margin: 0 0 0 5%;
+.announcements-title > p, .trending-title > p, .projects-title > p{
+    margin: 0 0 0 10px;
     font-size: 22px;
+    font-weight: 900;
 }
 
 .announcements > .announcements.outer, .trending > .trending.outer{
@@ -146,10 +216,71 @@ div.outer-container{
 }
 
 .announcements.inner, .trending.inner{
+    display: flex;
+    flex-direction: column;
     flex: 1;
     background-color: slategrey;
     border-radius: 10px;
-    margin: 5%;
+    margin: 10px;
+}
+
+.announcements.inner > .wrapper, .trending.inner > .wrapper{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: aqua;
+}
+
+.wrapper > .announcement, .wrapper > .trending{
+    display: flex;
+    flex: 1;
+    background-color: tomato;
+    font-size: 13px;
+}
+
+.wrapper > .announcement > p{
+    margin: 10px;
+    cursor: pointer;
+    max-width: 70%;
+}
+
+.wrapper > .trending p{
+    margin: 0 10px;
+    max-width: 70%;
+}
+
+.trending > .left img{
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    outline-style: solid;
+    background-color: thistle;
+    cursor: pointer;
+}
+
+.trending > .left img:hover{
+    transform: scale(1.03);
+}
+
+.wrapper > .announcement span, .wrapper > .trending span{
+    display: block;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 5px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.wrapper > .trending > .left{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper > .trending > .right{
+    display: flex;
+    flex: 1;
+    align-items: center;
 }
 
 .row.bottom.trending{
@@ -174,6 +305,10 @@ div.outer-container{
     }
     .column.right > .row.bottom.main{
         flex-direction: column-reverse;
+    }
+    .projects.outer > .projects.inner{
+
+        grid-template-columns: 1fr;
     }
     .row.bottom.trending{
         flex-direction: column;
