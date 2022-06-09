@@ -1,7 +1,13 @@
 *{
-    outline-style: solid;
-    outline-width: thin;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --hamburguer-color: black;
+    --morgan-background-color: yellow;
+    /* Color palette: https://coolors.co/palette/d8e2dc-ffe5d9-ffcad4-f4acb7-9d8189 */
+    --color-100: #D8E2DC;
+    --color-200: #FFE5D9;
+    --color-300: #FFCAD4;
+    --color-400: #F4ACB7;
+    --color-500: #9D8189;
 }
 
 html, body{
@@ -22,7 +28,7 @@ div.outer-container{
 
 .outer-container > .column.left{
     grid-column: 1;
-    background-color: red;
+    background-color: var(--color-500);
     z-index: 2;
 }
 
@@ -37,7 +43,7 @@ div.outer-container{
     color: white;
     font-size: 18px;
     font-weight: 900;
-    background-color: red;
+    background-color: var(--color-500);
 }
 
 .sidebar > div.dashboard{
@@ -45,10 +51,13 @@ div.outer-container{
     margin-bottom: 60px;
 }
 
+.sidebar > div.dashboard > p{
+    margin-right: 10px;
+}
+
 .sidebar img[alt*="Dashboard"]{
     height: 60px;
     margin-right: 0px;
-    background-color: yellow;
 }
 
 .sidebar > div.communities{
@@ -70,9 +79,9 @@ div.outer-container{
 }
 
 .hamburguer.button > .bar1, .hamburguer.button > .bar2, .hamburguer.button > .bar3 {
+    background-color: var(--hamburguer-color);
     width: 35px;
     height: 5px;
-    background-color: white;
     margin: 6px;
     transition: 0.8s;
 }
@@ -80,12 +89,10 @@ div.outer-container{
 .outer-container > .column.right{
     display: flex;
     flex-direction: column;
-    background-color: aqua;
     z-index: 1;
 }
 
 .column.right > .row.top.navbar{
-    background-color: blueviolet;
     display: flex;
     align-items: center;
     transition: 0.8s;
@@ -96,7 +103,6 @@ div.outer-container{
     flex-direction: column;
     flex: 1;
     height: 100%;
-    background-color: green;
 }
 
 .navbar.right > img:hover{
@@ -109,7 +115,6 @@ div.outer-container{
     flex-direction: row;
     align-items: center;
     flex: 1;
-    background-color: springgreen;
 }
 
 .navbar.top > img:first-of-type{
@@ -118,7 +123,6 @@ div.outer-container{
 
 .navbar.top > img[alt$="icon"]{
     height: 24px;
-    background-color: red;
 }
 
 .navbar.top > img[alt$="icon"]:hover{
@@ -128,15 +132,16 @@ div.outer-container{
 .navbar.top > div.search-bar{
     width: 40%;
     border-radius: 10px;
-    background-color: grey;
+    background-color: var(--color-300);
     padding: 1px;
-    margin-right: auto;
+    margin: 0 auto 0 10px;
 }
 
-.navbar.top > img{
-    background-color: aqua;
+.navbar.top > img:last-of-type{
+    background-color: var(--morgan-background-color);
     height: 50px;
     margin: 10px;
+    margin-top: 20px;
     border-radius: 50%;
     outline-style: solid;
     cursor: pointer;
@@ -152,10 +157,11 @@ div.outer-container{
     flex-direction: row;
     align-items: center;
     flex: 1.5;
-    background-color: cornflowerblue;
+    padding-bottom: 10px;
 }
 
 .navbar.bottom > img{
+    background-color: var(--morgan-background-color);
     height: 60px;
     border-radius: 50%;
     outline-style: solid;
@@ -184,7 +190,7 @@ div.buttons > button{
     margin: 0 10px 5px;
     padding: 7px 28px;
     border-radius: 20px;
-    background-color: blueviolet;
+    background-color: var(--color-500);
     color: white;
     font-weight: 900;
     cursor: pointer;
@@ -196,7 +202,7 @@ div.buttons > button:hover{
 
 .column.right > .row.bottom.main{
     flex: 1;
-    background-color: yellow;
+    background-color: var(--color-100);
     display: flex;
     transition: 0.1s;
 }
@@ -204,7 +210,6 @@ div.buttons > button:hover{
 .row.bottom.main > .column.left{
     display: flex;
     flex-direction: column;
-    background-color: white;
     flex: 3;
     margin-top: 3%;
 }
@@ -217,14 +222,12 @@ div.buttons > button:hover{
 .column.left > .projects.outer{
     display: flex;
     flex: 13;
-    background-color: crimson;
 }
 
 .projects.outer > .projects.inner{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     flex: 1;
-    background-color: teal;
     margin: 10px;
     gap: 10px;
     border-radius: 10px;
@@ -234,7 +237,7 @@ div.buttons > button:hover{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background-color: skyblue;
+    background-color: var(--color-200);
 }
 
 .project > .top{
@@ -247,7 +250,6 @@ div.buttons > button:hover{
 
 .project > .top span{
     display: block;
-    background-color: tomato;
     font-size: 18px;
     font-weight: 900;
     margin-bottom: 10px;
@@ -268,7 +270,6 @@ div.buttons > button:hover{
 
 .project > .bottom > img{
     height: 30px;
-    filter: invert(1);
     margin: 10px 0;
     cursor: pointer;
 }
@@ -283,7 +284,6 @@ div.buttons > button:hover{
 
 .row.bottom.main > .column.right{
     display: flex;
-    background-color: black;
     flex: 1;
     flex-direction: column;
     margin-top: 3%;
@@ -293,7 +293,6 @@ div.buttons > button:hover{
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: sandybrown;
 }
 
 .announcements > .announcements-title, .trending > .trending-title, .column.left > .projects-title{
@@ -317,7 +316,7 @@ div.buttons > button:hover{
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: slategrey;
+    background-color: var(--color-200);
     border-radius: 10px;
     margin: 10px;
 }
@@ -327,13 +326,11 @@ div.buttons > button:hover{
     display: flex;
     flex-direction: column;
     margin: 10px;
-    background-color: aqua;
 }
 
 .wrapper > .announcement, .wrapper > .trending{
     display: flex;
     flex: 1;
-    background-color: tomato;
     font-size: 13px;
 }
 
@@ -353,8 +350,20 @@ div.buttons > button:hover{
     margin: 10px;
     border-radius: 50%;
     outline-style: solid;
-    background-color: thistle;
     cursor: pointer;
+}
+
+.trending > .left img[alt*="Tegan"]{
+    background-color: red;
+}
+.trending > .left img[alt*="Morgan"]{
+    background-color: var(--morgan-background-color);
+}
+.trending > .left img[alt*="Kendall"]{
+    background-color: pink;
+}
+.trending > .left img[alt*="Alex"]{
+    background-color: blue;
 }
 
 .trending > .left img:hover{
@@ -366,7 +375,6 @@ div.buttons > button:hover{
     font-size: 16px;
     font-weight: 900;
     margin: 5px;
-    background-color: red;
     cursor: pointer;
 }
 
@@ -382,7 +390,6 @@ div.buttons > button:hover{
 }
 
 .row.bottom.trending{
-    background-color: seagreen;
 }
 
 @media (max-width: 1000px){
@@ -410,6 +417,26 @@ div.buttons > button:hover{
 
     .navbar.top > img:last-of-type, .navbar.top > p{
         display: none;
+    }
+
+    .navbar > .navbar.right{
+        flex-direction: column-reverse;
+    }
+
+    .navbar.right > .top{
+        flex-direction: row;
+    }
+
+    .navbar.right > .top > img[title="Notifications"]{
+        display: none;
+    }
+
+    .navbar.top > img:first-of-type {
+        margin-left: auto;
+    }
+
+    .navbar.top > div.search-bar {
+        margin: 0 10px;
     }
 
     .navbar.right > .bottom{
