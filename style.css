@@ -16,7 +16,7 @@ body{
 div.outer-container{
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr;
 }
 
@@ -24,6 +24,45 @@ div.outer-container{
     grid-column: 1;
     background-color: red;
     z-index: 2;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar > div{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    background-color: red;
+}
+
+.sidebar > div.dashboard{
+    font-size: 28px;
+    margin-bottom: 60px;
+}
+
+.sidebar img[alt*="Dashboard"]{
+    height: 60px;
+    margin-right: 0px;
+    background-color: yellow;
+}
+
+.sidebar > div.communities{
+    margin-bottom: 80px;
+}
+
+.sidebar img{
+    filter:invert(1);
+    margin:  0 10px;
+}
+
+.sidebar img:not([alt*="Dash"]):hover, .sidebar > div:not([class*="dash"]) p:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .navbar > .hamburguer.button{
@@ -60,9 +99,52 @@ div.outer-container{
     background-color: green;
 }
 
+.navbar.right > img:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
 .navbar.right > .top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     flex: 1;
     background-color: springgreen;
+}
+
+.navbar.top > img:first-of-type{
+    margin-left: 20px;
+}
+
+.navbar.top > img[alt$="icon"]{
+    height: 24px;
+    background-color: red;
+}
+
+.navbar.top > img[alt$="icon"]:hover{
+    transform: scale(1.1);
+}
+
+.navbar.top > div.search-bar{
+    width: 40%;
+    border-radius: 10px;
+    background-color: grey;
+    padding: 1px;
+    margin-right: auto;
+}
+
+.navbar.top > img{
+    background-color: aqua;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    outline-style: solid;
+    cursor: pointer;
+}
+
+.navbar.top > p{
+    font-weight: 900;
+    margin-right: 20px;
 }
 
 .navbar.right > .bottom{
@@ -77,8 +159,7 @@ div.outer-container{
     height: 60px;
     border-radius: 50%;
     outline-style: solid;
-    margin-left: 20px;
-    margin-right: 10px;
+    margin: 5px 10px 0 20px;
 }
 
 .navbar.bottom span{
@@ -88,19 +169,36 @@ div.outer-container{
 
 .navbar.bottom > p{
     font-size: 24px;
-    margin-right: auto;
     font-weight: 900;
+    margin: 5px 0;
 }
 
 .navbar.bottom > div.buttons{
-    margin-right: 20px;
+    display: flex;
+    margin: 0 20px 0 auto;
+    align-items: flex-end;
+    height: 100%;
+}
+
+div.buttons > button{
+    margin: 0 10px 5px;
+    padding: 7px 28px;
+    border-radius: 20px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+div.buttons > button:hover{
+    transform: scale(1.03);
 }
 
 .column.right > .row.bottom.main{
     flex: 1;
     background-color: yellow;
     display: flex;
-    transition: 0.7s;
+    transition: 0.1s;
 }
 
 .row.bottom.main > .column.left{
@@ -294,34 +392,74 @@ div.outer-container{
         width: 0;
         transition-duration: 0.2s;
     }
+
+    .sidebar > div{
+        display: none;
+    }
+
     .outer-container > .column.right{
         grid-column: 1 / -1;
         grid-row: 1;
     }
+
     .navbar > .hamburguer.button{
         display: inline-block;
         cursor: pointer;
         transition-duration: 0.2s;
     }
+
+    .navbar.top > img:last-of-type, .navbar.top > p{
+        display: none;
+    }
+
+    .navbar.right > .bottom{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar.bottom > div.buttons{
+        margin: 0;
+    }
+
+    div.buttons > button{
+        margin: 0px 5px;
+        padding: 4px 12px;
+    }
+
     .column.right > .row.bottom.main{
         flex-direction: column-reverse;
     }
+
     .projects.outer > .projects.inner{
 
         grid-template-columns: 1fr;
     }
+
     .row.bottom.trending{
         flex-direction: column;
     }
+
     .outer-container > .column.left.show-sidebar{
         width: calc(100% - 47px);
     }
+
+    .sidebar > div.show-sidebar{
+        display: flex;
+    }
+
     .move-hamburguer{
         margin-left: calc(100% - 47px);
     }
-    .blur{
-        filter: blur(5px);
+
+    .navbar.right.hidden{
+        display: none;
     }
+
+    .blur{
+        filter: blur(20px);
+    }
+
     .increase-index{
         z-index: 1;
     }
