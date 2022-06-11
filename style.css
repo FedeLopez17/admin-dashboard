@@ -233,7 +233,6 @@ div.buttons > button{
     color: white;
     font-weight: 900;
     cursor: pointer;
-    background-color: var(--color-500);
     transition-duration: 0.5s;
     border-style: none;
 }
@@ -265,7 +264,7 @@ div.buttons > button:hover{
 
 .column.left > .projects.outer{
     display: flex;
-    flex: 13;
+    /* flex: 13; */
 }
 
 .projects.outer > .projects.inner{
@@ -377,7 +376,7 @@ div.buttons > button:hover{
 .announcements.inner, .trending.inner{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    /* flex: 1; */
     background-color: var(--color-200);
     border-radius: 10px;
     margin: 10px 20px;

@@ -117,27 +117,28 @@ function makeEyesBlink(){
 }
 
 function selectWaitInterval(){
-    let interval;
-    do {
-        interval = Math.floor(Math.random() * 10);
-    }while (interval >= 5);
+    let interval = getRandomIntInclusive(2, 5);
     interval = Number(interval += "000");
     return interval;
 }
 
 function blink(){
-    let eye = pickOneEye();
-     if (typeof(lastEye) !== "undefined") {eyeIcons[lastEye].classList.toggle("blink");}
-     eyeIcons[eye].classList.toggle("blink");
-     lastEye = eye;
+    let eye;
+    do {eye = chooseOneEye(); } while (eye === lastEye); 
+    if (typeof(lastEye) !== "undefined") {eyeIcons[lastEye].classList.toggle("blink");}
+    eyeIcons[eye].classList.toggle("blink");
+    lastEye = eye;
 }
 
-function pickOneEye(){
-    let eyeNumber;
-    do {
-        eyeNumber = Math.floor(Math.random() * 10);
-    }while (eyeNumber > 5);
-    return eyeNumber;
+function chooseOneEye(){
+    let eyeChosen = getRandomIntInclusive(0, 5);
+    return eyeChosen;
 }
+
+ function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+ }
 
 makeEyesBlink();
