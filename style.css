@@ -1,5 +1,5 @@
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root{
@@ -493,6 +493,7 @@ div.buttons > button:hover{
 
     .navbar > .hamburguer.button{
         display: inline-block;
+        margin-top: 5px;
         cursor: pointer;
         transition-duration: 0.2s;
     }
