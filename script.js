@@ -2,6 +2,7 @@ const hamburguerButton = document.querySelector(".hamburguer.button");
 const sidebar = document.querySelector(".sidebar");
 const sidebarElements = document.querySelectorAll(".sidebar > div");
 const main = document.querySelector(".row.bottom.main");
+const navbar = document.querySelector(".row.top.navbar");
 const navbarRight = document.querySelector(".navbar.right");
 const dashboard = document.querySelector("div.dashboard");
 const dashboardIcon = document.querySelector("div.dashboard > img");
@@ -69,21 +70,18 @@ main.onselectstart = disableSelection;
 
 function toggleSidebar(){
     sidebar.classList.toggle("show-sidebar");
+    navbar.classList.toggle("shadow");
     for (let element of sidebarElements){
          element.classList.toggle("show-sidebar");
      }
     moveAndChangeHamburguer();
-    blur(main);
+    hide(main);
     hide(navbarRight);
 }
 
 function moveAndChangeHamburguer(){
     hamburguerButton.classList.toggle("move-hamburguer");
     hamburguerButton.classList.toggle("change");
-}
-
-function blur(element){
-    element.classList.toggle("blur");
 }
 
 function hide(element){

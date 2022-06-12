@@ -91,7 +91,7 @@ img{
 }
 
 .sidebar > div.communities{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .sidebar img{
@@ -126,7 +126,6 @@ img{
 .column.right > .row.top.navbar{
     display: flex;
     align-items: center;
-    transition: 0.8s;
     z-index: 1;
     box-shadow: 0px 7px 15px 1px #496bb5;
 }
@@ -465,8 +464,8 @@ div.buttons > button:hover{
 @media (max-width: 1000px){
     .outer-container > .column.left{
         position: absolute;
-        height: 100%;
         width: 0;
+        height: 100%;
         transition-duration: 0.2s;
     }
 
@@ -474,9 +473,22 @@ div.buttons > button:hover{
         display: none;
     }
 
+    .sidebar > div.dashboard{
+        margin-bottom: 20px;
+    }
+
+    .sidebar > div.communities{
+        margin-bottom: 0;
+    }
+    
+
     .outer-container > .column.right{
         grid-column: 1 / -1;
         grid-row: 1;
+    }
+
+    .row.top.navbar.shadow{
+        box-shadow: none !important;
     }
 
     .navbar > .hamburguer.button{
@@ -541,6 +553,10 @@ div.buttons > button:hover{
         flex-direction: column-reverse;
     }
 
+    .column.right > .row.bottom.main.hidden{
+        display: none;
+    }
+
     .projects.outer > .projects.inner{
 
         grid-template-columns: 1fr;
@@ -564,10 +580,6 @@ div.buttons > button:hover{
 
     .navbar.right.hidden{
         display: none;
-    }
-
-    .blur{
-        filter: blur(20px);
     }
 }
 
