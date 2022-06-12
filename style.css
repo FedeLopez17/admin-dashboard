@@ -195,7 +195,7 @@ img{
 
 .navbar.top > p{
     font-weight: 900;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .navbar.right > .bottom{
@@ -225,7 +225,7 @@ img{
 
 .navbar.bottom > div.buttons{
     display: flex;
-    margin: 0 20px 0 auto;
+    margin: 0 30px 0 auto;
     align-items: flex-end;
     height: 100%;
 }
@@ -384,7 +384,7 @@ div.buttons > button:hover{
     flex: 1;
     background-color: var(--color-200);
     border-radius: 10px;
-    margin: 10px 20px;
+    margin: 10px 40px 10px 20px;
 }
 
 .announcements.inner > .wrapper, .trending.inner > .wrapper{
