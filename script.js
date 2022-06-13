@@ -5,7 +5,7 @@ const main = document.querySelector(".row.bottom.main");
 const navbar = document.querySelector(".row.top.navbar");
 const navbarRight = document.querySelector(".navbar.right");
 const dashboard = document.querySelector("div.dashboard");
-const dashboardIcon = document.querySelector("div.dashboard > img");
+const dashboardIcon = document.querySelector("div.dashboard img");
 const friends = document.querySelectorAll("img.profile-picture");
 const messageDiv = document.querySelector("div.message");
 const closeButton = messageDiv.lastElementChild.firstElementChild;
@@ -63,14 +63,6 @@ const MESSAGES = {
     ]
 }
 
-function hide(element){
-    element.classList.toggle("hidden");
-}
-
-function blur(element){
-    element.classList.toggle("blurred");
-}
-
 hamburguerButton.addEventListener("click", toggleSidebar);
 
 function disableSelection(){
@@ -78,6 +70,14 @@ function disableSelection(){
 }
 sidebar.onselectstart = disableSelection; 
 main.onselectstart = disableSelection; 
+
+function hide(element){
+    element.classList.toggle("hidden");
+}
+
+function blur(element){
+    element.classList.toggle("blurred");
+}
 
 function toggleSidebar(){
     sidebar.classList.toggle("show-sidebar");
@@ -95,14 +95,13 @@ function moveAndChangeHamburguer(){
     hamburguerButton.classList.toggle("change");
 }
 
-
 dashboard.addEventListener("mouseenter", () =>{
     dashboardIcon.classList.add("animate");
 })
-
 dashboard.addEventListener("mouseleave", () =>{
     dashboardIcon.classList.remove("animate");
 })
+
 
 for (let friend of friends){
     let friendName = friend["src"].split("img/")[1].slice(0, -4);
@@ -120,7 +119,6 @@ for (let friend of friends){
         messageDiv.classList.toggle("show-message");
     });
 }
-
 closeButton.addEventListener("click", ()=>{
     messageDiv.classList.toggle("hinge");
     setTimeout(()=>{
@@ -129,6 +127,7 @@ closeButton.addEventListener("click", ()=>{
         blur(outerContainer);
     }, 1300)
 })
+
 
 function makeEyesBlink(){
     let interval = selectWaitInterval();
