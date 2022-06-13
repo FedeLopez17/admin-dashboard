@@ -127,7 +127,7 @@ closeButton.addEventListener("click", ()=>{
         messageDiv.classList.toggle("show-message");
         messageDiv.classList.toggle("hinge");
         blur(outerContainer);
-    }, 1800)
+    }, 1300)
 })
 
 function makeEyesBlink(){
@@ -137,7 +137,7 @@ function makeEyesBlink(){
 }
 
 function selectWaitInterval(){
-    let interval = getRandomIntInclusive(2, 5);
+    let interval = getRandomIntInclusive(1, 4);
     interval = Number(interval += "000");
     return interval;
 }

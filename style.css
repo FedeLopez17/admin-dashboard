@@ -626,8 +626,12 @@ img[title="Close"]:hover{
     }
 
     .projects.outer > .projects.inner{
-
         grid-template-columns: 1fr;
+        margin: 10px 20px;
+    }
+
+    .announcements.inner, .trending.inner{
+        margin: 10px 20px;
     }
 
     .row.bottom.trending{
@@ -648,6 +652,10 @@ img[title="Close"]:hover{
 
     .navbar.right.hidden{
         display: none;
+    }
+
+    .message-inner.right > .bottom{
+        font-size: 100%;
     }
 }
 
@@ -732,7 +740,7 @@ img[title="Close"]:hover{
 
 .message.hinge{
     animation-name: hinge;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     transform-origin: top left;
 }
