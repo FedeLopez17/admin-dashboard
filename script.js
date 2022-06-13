@@ -7,10 +7,13 @@ const navbarRight = document.querySelector(".navbar.right");
 const dashboard = document.querySelector("div.dashboard");
 const dashboardIcon = document.querySelector("div.dashboard > img");
 const friends = document.querySelectorAll("img.profile-picture");
+const messageDiv = document.querySelector("div.message");
+const closeButton = messageDiv.lastElementChild.firstElementChild;
+const outerContainer = document.querySelector(".outer-container");
 const eyeIcons = document.querySelectorAll(".project > .bottom > img[src*='eye']");
 let lastEye;
 const MESSAGES = {
-    pinguino: [
+    penguin: [
         "I'm grateful for my awesome friends!", 
         "When in doubt, wing it out.",
         "Keep calm and keep waddling.",
@@ -22,7 +25,7 @@ const MESSAGES = {
         "Always be yourself. Unless you can be a penguin, then always be a penguin!",
         "https://www.youtube.com/watch?v=--t57BGKI-0",
     ],
-    rana: [
+    frog: [
         "I'm not like other software developers, I love bugs!", 
         "What do frogs do with paper? Rip-it!",
         "Why are frogs so happy? Because they eat whatever bugs them.",
@@ -34,7 +37,7 @@ const MESSAGES = {
         "I hate traffic!",
         "https://www.youtube.com/watch?v=5nCPbPPrQxQ",
     ],
-    buho: [
+    owl: [
         "I'm working on a great project!", 
         "You're a bit of a know-it-owl.", 
         "I do a lot of things, I'm a jack of owl trades.", 
@@ -46,7 +49,7 @@ const MESSAGES = {
         "Why do boy owl babies take after their dad? Like feather, like son.",
         "https://www.youtube.com/watch?v=d_FEaFgJyfA"
     ],
-    pulpo: [
+    octopus: [
         "What's the plural of octopus?",
         "How many tickles does it take to make an octopus laugh? Ten-tickles!",
         "How does an octopus propose to its sweetheart? 'I would like to ask for your hand, hand, hand, hand, hand, hand, hand, hand in marriage.'",
@@ -58,6 +61,14 @@ const MESSAGES = {
         "How did the octopus lose weight? He went on a low-crab diet.",
         "https://www.youtube.com/watch?v=b_o3O2shsxY"
     ]
+}
+
+function hide(element){
+    element.classList.toggle("hidden");
+}
+
+function blur(element){
+    element.classList.toggle("blurred");
 }
 
 hamburguerButton.addEventListener("click", toggleSidebar);
@@ -84,9 +95,6 @@ function moveAndChangeHamburguer(){
     hamburguerButton.classList.toggle("change");
 }
 
-function hide(element){
-    element.classList.toggle("hidden");
-}
 
 dashboard.addEventListener("mouseenter", () =>{
     dashboardIcon.classList.add("animate");
@@ -104,9 +112,23 @@ for (let friend of friends){
             window.location.href = message;
             return;    
         }
-        alert(message);
+        let image = messageDiv.firstElementChild.firstElementChild;
+        image.setAttribute("src", `./img/${friendName}.jpg`);
+        image.setAttribute("alt", `Cute ${friendName}`);
+        messageDiv.lastElementChild.lastElementChild.innerHTML = `<p>${message}</p>`;
+        blur(outerContainer);
+        messageDiv.classList.toggle("show-message");
     });
 }
+
+closeButton.addEventListener("click", ()=>{
+    messageDiv.classList.toggle("hinge");
+    setTimeout(()=>{
+        messageDiv.classList.toggle("show-message");
+        messageDiv.classList.toggle("hinge");
+        blur(outerContainer);
+    }, 1800)
+})
 
 function makeEyesBlink(){
     let interval = selectWaitInterval();
