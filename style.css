@@ -639,7 +639,7 @@ img[title="Close"]:hover{
         margin: 10px 20px;
     }
 
-    .row.bottom.trending{
+    .column.right > .row.bottom.trending{
         flex-direction: column;
     }
 
