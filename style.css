@@ -61,7 +61,7 @@ div.outer-container{
 
 /*Learnt how to do the sidebar hover effect from stack overflow. https://stackoverflow.com/questions/27036969/fill-button-with-a-different-color-on-hover */
 
-.sidebar > div{
+.sidebar > nav{
     display: flex;
     align-items: center;
     color: white;
@@ -73,16 +73,17 @@ div.outer-container{
     transition: background-position 0.4s;
 }
 
-.sidebar > div:not([class*="dash"]):hover{
+.sidebar > nav:not([class*="dash"]):hover{
     background-position: 0 0;
     z-index: 1;
     box-shadow: -3px 5px 7px 3px var(--color-400);
     box-shadow: 2px 6px 6px 0px var(--color-400);
 }
 
-.sidebar > div.dashboard{
+.sidebar > nav.dashboard{
     font-size: 28px;
-    margin-bottom: 67px;
+    margin: 33px 0;
+    margin-right:20px;
     cursor: pointer;
 }
 
@@ -92,7 +93,7 @@ div.outer-container{
     animation-iteration-count: 1;
 }
 
-.sidebar > div.dashboard p{
+.sidebar > nav.dashboard p{
     margin-right: 10px;
 }
 
@@ -105,8 +106,8 @@ img{
     margin-right: 0px;
 }
 
-.sidebar > div.communities{
-    margin-bottom: 60px;
+.sidebar > nav.communities{
+    margin-bottom: 20px;
 }
 
 .sidebar img{
@@ -119,7 +120,7 @@ img{
     cursor: pointer;
 }
 
-.navbar > .hamburguer.button{
+header > .hamburguer.button{
     display: none;
     align-self: flex-start;
 }
@@ -138,52 +139,51 @@ img{
     z-index: 1;
 }
 
-.column.right > .row.top.navbar{
+.column.right > header.row.top{
     display: flex;
     align-items: center;
     z-index: 1;
-    box-shadow: 0px 7px 15px 1px #496bb5;
 }
 
-.navbar > .navbar.right{
+header > .right{
     display: flex;
     flex-direction: column;
     flex: 1;
     height: 100%;
 }
 
-.navbar.right > img:hover{
+header .right > img:hover{
     transform: scale(1.03);
     cursor: pointer;
 }
 
-.navbar.right > .top{
+header .right > .top{
     display: flex;
     flex-direction: row;
     align-items: center;
     flex: 1;
 }
 
-.navbar.top > img:first-of-type{
+header .top > img:first-of-type{
     margin: 0 auto 0 0;
 }
 
-.navbar.top img[alt$="icon"]{
+header .top img[alt$="icon"]{
     height: 24px;
 }
 
-.navbar.top > img[alt$="icon"]:hover{
+header .top > img[alt$="icon"]:hover{
     transform: scale(1.1);
 }
 
-.navbar.top > img[alt*="Notifications"]:hover{
+header .top img[alt*="Notifications"]:hover{
     animation-name: vibrate;
     animation-duration: 0.3s;
     animation-iteration-count: infinite;
 }
 
-.navbar.top > div.search-bar{
-    width: min(40%, 300px);
+header .top > div.search-bar{
+    width: 40%;
     border-radius: 10px;
     background-color: var(--color-200);
     padding: 1px;
@@ -199,7 +199,7 @@ img{
     box-shadow: 0px 0px 7px 1px darkgrey;
 }
 
-.navbar.top > img:last-of-type{
+header .top > img:last-of-type{
     background-color: var(--morgan-background-color);
     height: 50px;
     margin: 10px;
@@ -207,12 +207,12 @@ img{
     box-shadow: none;
 }
 
-.navbar.top > p{
+header .top > p{
     font-weight: 900;
     margin-right: 40px;
 }
 
-.navbar.right > .bottom{
+header .right > .bottom{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -220,24 +220,24 @@ img{
     padding-bottom: 10px;
 }
 
-.navbar.bottom > img{
+header .bottom > img{
     background-color: var(--morgan-background-color);
     height: 60px;
     margin: 5px 10px 0 20px;
 }
 
-.navbar.bottom span{
+header .bottom span{
     display: block;
     font-size: 16px;
 }
 
-.navbar.bottom > p{
+header .bottom > p{
     font-size: 24px;
     font-weight: 900;
     margin: 5px 0;
 }
 
-.navbar.bottom > div.buttons{
+header .bottom > div.buttons{
     display: flex;
     margin: 0 30px 0 auto;
     align-items: flex-end;
@@ -263,14 +263,14 @@ div.buttons > button:hover{
     box-shadow: 0px 0px 1px 2px var(--color-500);
 }
 
-.column.right > .row.bottom.main{
+.column.right > .row.bottom{
     flex: 1;
     background-color: var(--color-400);
     display: flex;
     transition: 0.1s;
 }
 
-.row.bottom.main > .column.left{
+.row.bottom> .column.left{
     display: flex;
     flex-direction: column;
     flex: 3;
@@ -361,11 +361,12 @@ div.buttons > button:hover{
     margin-right: 3%;
 }
 
-.row.bottom.main > .column.right{
+.row.bottom > .column.right{
     display: flex;
     flex: 1;
     flex-direction: column;
     margin-top: 3%;
+    gap: 10px;
 }
 
 .row.top.announcements, .row.bottom.trending{
@@ -543,15 +544,16 @@ img[title="Close"]:hover{
         transition-duration: 0.2s;
     }
 
-    .sidebar > div{
+    .sidebar > nav{
         display: none;
+        font-size: 22px;
     }
 
-    .sidebar > div.dashboard{
+    .sidebar > nav.dashboard{
         margin-bottom: 20px;
     }
 
-    .sidebar > div.communities{
+    .sidebar > nav.communities{
         margin-bottom: 0;
     }
     
@@ -561,60 +563,56 @@ img[title="Close"]:hover{
         grid-row: 1;
     }
 
-    .row.top.navbar.shadow{
-        box-shadow: none !important;
-    }
-
-    .navbar > .hamburguer.button{
+    header > .hamburguer.button{
         display: inline-block;
         margin-top: 5px;
         cursor: pointer;
         transition-duration: 0.2s;
     }
 
-    .navbar.top > img:last-of-type, .navbar.top > p{
+    header .top > img:last-of-type, header .top > p{
         display: none;
     }
 
-    .navbar > .navbar.right{
+    header > .right{
         flex-direction: column-reverse;
     }
 
-    .navbar.right > .top{
+    header .right > .top{
         flex-direction: row;
         justify-content: center;
     }
 
-    .navbar.right > .top img[title="Notifications"]{
+    header .right > .top img[title="Notifications"]{
         display: none;
     }
 
-    .navbar.top > img:first-of-type {
+    header .top > img:first-of-type {
         margin: 0;
         align-self: flex-end;
         margin-bottom: 10px;
     }
 
-    .navbar.top > div.search-bar {
+    header .top > div.search-bar {
         margin: 20px 10px 10px;
         margin-left: calc(10px - var(--hamburguer-total-width));
     }
 
-    .navbar.right > .bottom{
+    header .right > .bottom{
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .navbar.bottom > img{
+    header .bottom > img{
         margin-left: calc(20px - var(--hamburguer-total-width));
     }
 
-    .navbar.bottom > p{
+    header .bottom > p{
         margin-left: calc(0px - var(--hamburguer-total-width));
     }
     
-    .navbar.bottom > div.buttons{
+    header .bottom > div.buttons{
         margin: 0;
         margin-left: calc(0px - var(--hamburguer-total-width));
     }
@@ -624,11 +622,11 @@ img[title="Close"]:hover{
         padding: 4px 12px;
     }
 
-    .column.right > .row.bottom.main{
+    .column.right > .row.bottom{
         flex-direction: column-reverse;
     }
 
-    .column.right > .row.bottom.main.hidden{
+    .column.right > .row.bottom.hidden{
         display: none;
     }
 
@@ -649,7 +647,7 @@ img[title="Close"]:hover{
         width: calc(100% - 47px);
     }
 
-    .sidebar > div.show-sidebar{
+    .sidebar > nav.show-sidebar{
         display: flex;
     }
 
@@ -657,7 +655,7 @@ img[title="Close"]:hover{
         margin-left: calc(100% - 47px);
     }
 
-    .navbar.right.hidden{
+    header .right.hidden{
         display: none;
     }
 

@@ -1,11 +1,11 @@
 const hamburguerButton = document.querySelector(".hamburguer.button");
 const sidebar = document.querySelector(".sidebar");
-const sidebarElements = document.querySelectorAll(".sidebar > div");
-const main = document.querySelector(".row.bottom.main");
-const navbar = document.querySelector(".row.top.navbar");
-const navbarRight = document.querySelector(".navbar.right");
-const dashboard = document.querySelector("div.dashboard");
-const dashboardIcon = document.querySelector("div.dashboard img");
+const sidebarElements = document.querySelectorAll(".sidebar > nav");
+const main = document.querySelector(".row.bottom");
+const header = document.querySelector("header");
+const headerRight = document.querySelector("header > .right");
+const dashboard = document.querySelector("nav.dashboard");
+const dashboardIcon = document.querySelector("nav.dashboard img");
 const friends = document.querySelectorAll("img.profile-picture");
 const messageDiv = document.querySelector("div.message");
 const closeButton = messageDiv.lastElementChild.firstElementChild;
@@ -81,13 +81,12 @@ function blur(element){
 
 function toggleSidebar(){
     sidebar.classList.toggle("show-sidebar");
-    navbar.classList.toggle("shadow");
     for (let element of sidebarElements){
          element.classList.toggle("show-sidebar");
      }
     moveAndChangeHamburguer();
     hide(main);
-    hide(navbarRight);
+    hide(headerRight);
 }
 
 function moveAndChangeHamburguer(){
