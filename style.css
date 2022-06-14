@@ -32,6 +32,7 @@ a:active, a:link, a:visited, a:hover{
     font-size: inherit;
     text-decoration: none;
     display: inherit;
+    align-items: center;
 }
 
 div.outer-container{
