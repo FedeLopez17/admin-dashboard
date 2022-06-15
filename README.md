@@ -1,7 +1,12 @@
 # Admin dashboard: 
-###  [Live demo](https://fedelopez17.github.io/admin-dashboard/)
+###  [Click here](https://fedelopez17.github.io/admin-dashboard/) to see the live demo.
+
 
 ![landscape orientation screenshot](https://github.com/FedeLopez17/admin-dashboard/blob/main/img/readme-images/screenshot-landscape.png?raw=true)
+
+<p align="center">
+  <img src="https://github.com/FedeLopez17/admin-dashboard/blob/main/img/readme-images/portrait.gif" alt="portrait gif" />
+</p>
 
 ## Description:
 This is the seventh project I have tackled while working my way through [The Odin Project's curriculum](https://www.theodinproject.com/paths).
@@ -11,7 +16,9 @@ I had a great time working on this project, and despite it being far from perfec
 
 ## Technologies used:
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ## New things learned:
@@ -38,8 +45,9 @@ Besides, messages with silly jokes and puns pop up when the profile-pictures are
 I think this was a fun touch, and I'm pleased with how the animations look.
 There are a few more little "easter eggs" I won't mention for obvious reasons.
 
-  
-  
+
+https://user-images.githubusercontent.com/95712292/173877189-ac21e3ab-ab21-4e16-bdce-797e35d9e2e4.mp4
+
 
 ## Credits:
 The images for the profile fictures where taken from a [flaticon](https://www.flaticon.es/) [pack](https://www.flaticon.es/packs/animals-53?word=animals&style_id=15&family_id=3&group_id=1).
