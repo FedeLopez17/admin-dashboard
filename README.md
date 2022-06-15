@@ -37,7 +37,7 @@ I had a great time working on this project, and despite it being far from perfec
 - Commit more frequently.
 
 ## Funny details:
-I always try to add a few silly jokes to my projects. This project wasn't the exception.<br>
+I always try to add a few [silly jokes](https://www.youtube.com/watch?v=dQw4w9WgXcQ) to my projects. This project wasn't the exception.<br>
 A creative joke I came up with for this project was making the little eye symbols blink at random time intervals.<br>
 The reaction I was going for was users second-guessing whether they had actually seen an eye blink. (Which was, to my delight, exactly what happened upon showing the page to one of my friends).<br>
 Deciding within which range to set the function making the eyes blink was definitely a challenge.
