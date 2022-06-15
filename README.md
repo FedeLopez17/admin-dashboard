@@ -1,7 +1,8 @@
 # Admin dashboard: 
-###  [Click here](https://fedelopez17.github.io/admin-dashboard/) to see the live demo.
+###  [Check out the live demo](https://fedelopez17.github.io/admin-dashboard/)! :grinning:
 
 
+## How it looks:
 ![landscape orientation screenshot](https://github.com/FedeLopez17/admin-dashboard/blob/main/img/readme-images/screenshot-landscape.png?raw=true)
 
 <p align="center">
@@ -52,5 +53,7 @@ https://user-images.githubusercontent.com/95712292/173877189-ac21e3ab-ab21-4e16-
 ## Credits:
 The images for the profile fictures where taken from a [flaticon](https://www.flaticon.es/) [pack](https://www.flaticon.es/packs/animals-53?word=animals&style_id=15&family_id=3&group_id=1).
 The rest of them where taken from [unsplash](https://unsplash.com/es/ ).  
+
 [:frog:](https://unsplash.com/es/fotos/E32fGlISSBk)  [:octopus:](https://unsplash.com/es/fotos/4WHK59SS-Is)  [:penguin:](https://unsplash.com/es/fotos/GQLT-fno6AU) [:owl:](https://unsplash.com/es/fotos/E6xfioiJmms).
+
 The icons were taken from [Material Design Icons](https://materialdesignicons.com/).
