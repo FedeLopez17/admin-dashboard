@@ -10,9 +10,9 @@
 </p>
 
 ## Description:
-This is the seventh project I have tackled while working my way through [The Odin Project's curriculum](https://www.theodinproject.com/paths).
-The [assignment](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard) was to re-create an admin dashboard based on a design file provided, and give it our own spin afterwards.
-Furthermore, it served as an introduction to the CSS Grid Layout Module.
+This is the seventh project I have tackled while working my way through [The Odin Project's curriculum](https://www.theodinproject.com/paths).<br>
+The [assignment](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard) was to re-create an admin dashboard based on a design file provided, and give it our own spin afterwards.<br>
+Furthermore, it served as an introduction to the CSS Grid Layout Module.<br>
 I had a great time working on this project, and despite it being far from perfect, I am quite happy with how it turned out.
 
 ## Technologies used:
@@ -37,13 +37,13 @@ I had a great time working on this project, and despite it being far from perfec
 - Commit more frequently.
 
 ## Funny details:
-I always try to add a few silly jokes to my projects. This project wasn't the exception.
-A creative joke I came up with for this project was making the little eye symbols blink at random intervals of time.
-The reaction I was going for was users second-guessing whether they had actually seen an eye blink. (Which was, to my delight, exactly what happened upon showing the page to one of my friends).
+I always try to add a few silly jokes to my projects. This project wasn't the exception.<br>
+A creative joke I came up with for this project was making the little eye symbols blink at random time intervals.<br>
+The reaction I was going for was users second-guessing whether they had actually seen an eye blink. (Which was, to my delight, exactly what happened upon showing the page to one of my friends).<br>
 Deciding within which range to set the function making the eyes blink was definitely a challenge.
-If they took too long to blink, the user might be already gone by the time they were supposed to blink, but if they constantly blinked it would unarguably lose its point.
+If they took too long to blink, the user might be already gone by the time they were supposed to blink, but if they constantly blinked it would unarguably lose its point.<br>
 Besides, messages with silly jokes and puns pop up when the profile-pictures are clicked. 
-I think this was a fun touch, and I'm pleased with how the animations look.
+I think this was a fun touch, and I'm pleased with how the animations look.<br>
 There are a few more little "easter eggs" I won't mention for obvious reasons.
 
 
