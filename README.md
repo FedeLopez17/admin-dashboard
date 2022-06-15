@@ -1,6 +1,8 @@
 # Admin dashboard: 
 ###  [Live demo](https://fedelopez17.github.io/admin-dashboard/)
 
+![landscape orientation screenshot](https://github.com/FedeLopez17/admin-dashboard/blob/main/img/readme-images/screenshot-landscape.png?raw=true)
+
 ## Description:
 This is the seventh project I have tackled while working my way through [The Odin Project's curriculum](https://www.theodinproject.com/paths).
 The [assignment](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard) was to re-create an admin dashboard based on a design file provided, and give it our own spin afterwards.
@@ -41,5 +43,6 @@ There are a few more little "easter eggs" I won't mention for obvious reasons.
 
 ## Credits:
 The images for the profile fictures where taken from a [flaticon](https://www.flaticon.es/) [pack](https://www.flaticon.es/packs/animals-53?word=animals&style_id=15&family_id=3&group_id=1).
-The rest of them where taken from [unsplash](https://unsplash.com/es/ ).  [:frog:](https://unsplash.com/es/fotos/E32fGlISSBk)  [:octopus:](https://unsplash.com/es/fotos/4WHK59SS-Is)  [:penguin:](https://unsplash.com/es/fotos/GQLT-fno6AU) [:owl:](https://unsplash.com/es/fotos/E6xfioiJmms) .
+The rest of them where taken from [unsplash](https://unsplash.com/es/ ).  
+[:frog:](https://unsplash.com/es/fotos/E32fGlISSBk)  [:octopus:](https://unsplash.com/es/fotos/4WHK59SS-Is)  [:penguin:](https://unsplash.com/es/fotos/GQLT-fno6AU) [:owl:](https://unsplash.com/es/fotos/E6xfioiJmms).
 The icons were taken from [Material Design Icons](https://materialdesignicons.com/).
